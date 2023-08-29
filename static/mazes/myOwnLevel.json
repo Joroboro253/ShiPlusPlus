@@ -3,10 +3,10 @@
     " xxx xxx xxx ",
     "xx xxx xxx xx",
     "x   x   x   x",
-    "      1      ",
-    "   1         ",
-    "       1    1",
-    "    1        ",
+    "    x        ",
+    "    x         ",
+    "    x   1    1",
+    "    x        ",
     ">   1       1"
   ],
   "configurations" : {
