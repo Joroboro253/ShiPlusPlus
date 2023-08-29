@@ -6,26 +6,42 @@ public class Assignment1Part2 extends KarelTheRobot {
     public void run() throws Exception {
         turnLeft();
         moveUntilTheWall();
-        turnRight();
-        toNextColumn();
+        checkBeeper();
 
-        turnRight();
+        turnAround();
         moveUntilTheWall();
         turnLeft();
+        toNextColumn();
 
+        turnLeft();
+        moveUntilTheWall();
+        turnAround();
+
+        moveUntilTheWall();
+        turnLeft();
+        toNextColumn();
+
+        turnLeft();
+        moveUntilTheWall();
+        turnAround();
+        moveUntilTheWall();
+        turnLeft();
         toNextColumn();
         turnLeft();
         moveUntilTheWall();
 
-        turnRight();
-        toNextColumn();
-        turnRight();
+        turnAround();
         moveUntilTheWall();
-
     }
 
-    private void toNextColumn() throws Exception {
+    private void turnAround() throws Exception {
+        for (int i = 0; i < 2; i++) {
+            turnLeft();
+        }
+    }
 
+
+    private void toNextColumn() throws Exception {
         for (int i = 0; i < 4; i++) {
             move();
         }
@@ -33,21 +49,16 @@ public class Assignment1Part2 extends KarelTheRobot {
 
 
     private void moveUntilTheWall() throws Exception {
-        while (frontIsClear()){
+        while (!frontIsBlocked()){
             checkBeeper();
             move();
         }
+
     }
 
     private void checkBeeper() throws Exception {
         if (!beepersPresent()){
             putBeeper();
-        }
-    }
-
-    private void turnRight() throws Exception {
-        for (int i = 0; i < 3; i++) {
-            turnLeft();
         }
     }
 
